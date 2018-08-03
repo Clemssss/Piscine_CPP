@@ -6,7 +6,7 @@
 /*   By: clegirar <clegirar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 12:19:28 by clegirar          #+#    #+#             */
-/*   Updated: 2018/08/02 09:49:28 by clegirar         ###   ########.fr       */
+/*   Updated: 2018/08/03 10:45:15 by clegirar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 # define FIXED_CLASS_HPP
 
 # include <iostream>
+# include <sstream>
 # include <cmath>
 # include <ctype.h>
+# include <string>
+# include <cstdio>
 
 class	Fixed	{
 
@@ -32,6 +35,7 @@ class	Fixed	{
 		Fixed			operator-( Fixed const & rhs ) const;
 		Fixed			operator/( Fixed const & rhs ) const;
 		Fixed			operator*( Fixed const & rhs ) const;
+		Fixed			operator%( Fixed const & rhs ) const;
 
 		Fixed			operator++( int );
 		Fixed			operator--( int );

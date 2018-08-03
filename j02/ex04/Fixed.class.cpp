@@ -6,7 +6,7 @@
 /*   By: clegirar <clegirar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/01 13:39:48 by clegirar          #+#    #+#             */
-/*   Updated: 2018/08/02 09:34:17 by clegirar         ###   ########.fr       */
+/*   Updated: 2018/08/03 10:45:11 by clegirar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,10 @@ Fixed		Fixed::operator/( Fixed const & rhs ) const {
 
 Fixed		Fixed::operator*( Fixed const & rhs ) const {
 	return Fixed( this->toFloat() * rhs.toFloat() );
+}
+
+Fixed		Fixed::operator%( Fixed const & rhs ) const {
+	return Fixed( this->toInt() % rhs.toInt() );
 }
 
 Fixed	&	Fixed::operator=( Fixed const & rhs ) {
