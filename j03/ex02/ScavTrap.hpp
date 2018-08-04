@@ -1,40 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: clegirar <clegirar@student.42.fr>          +#+  +:+       +#+        */
+/*   By: clegirar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/03 11:31:43 by clegirar          #+#    #+#             */
-/*   Updated: 2018/08/04 15:57:59 by clegirar         ###   ########.fr       */
+/*   Created: 2018/08/04 12:06:28 by clegirar          #+#    #+#             */
+/*   Updated: 2018/08/04 16:01:16 by clegirar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAG_TRAP_HPP
-# define FRAG_TRAP_HPP
+#ifndef SCAV_TRAP_HPP
+# define SCAV_TRAP_HPP
 
+# include "FragTrap.hpp"
 # include <iostream>
 # include <random>
 # include <sstream>
 # include <time.h>
 
-class	FragTrap	{
+class	ScavTrap	{
 
 	public:
 
-		FragTrap( void );
-		FragTrap( std::string name );
-		FragTrap( FragTrap const & src );
-		~FragTrap( void );
+		ScavTrap( void );
+		ScavTrap( std::string name );
+		ScavTrap( ScavTrap const & src );
+		~ScavTrap( void );
 
-		FragTrap	&	operator=( FragTrap const & rhs );
+		ScavTrap	&	operator=( ScavTrap const & rhs );
 
 		unsigned	int	rangedAttack( std::string const & target );
 		unsigned	int	meleeAttack( std::string const & target );
 		void	takeDamage( unsigned int amount );
 		void	beRepaired( unsigned int amount );
 
-		unsigned	int	vaulthunter_dot_exe( std::string const & target );
+		unsigned	int	challengeNewcomer( void );
 
 		std::string	getName( void ) const;
 		void	setName( std::string name );
@@ -51,22 +52,20 @@ class	FragTrap	{
 		unsigned	int		_RangedAttackDmg;
 		unsigned	int		_ArmorDmgReduction;
 
-		unsigned	int		_FirstAttackDmg;
-		unsigned	int		_SecondAttackDmg;
-		unsigned	int		_ThirdAttackDmg;
-		unsigned	int		_FourthAttackDmg;
-		unsigned	int		_FifthAttackDmg;
+		unsigned	int		_FirstChallengePoints;
+		unsigned	int		_SecondChallengePoints;
+		unsigned	int		_ThirdChallengePoints;
+		unsigned	int		_FourthChallengePoints;
+		unsigned	int		_FifthChallengePoints;
 
-		unsigned	int		_CostVaulthunter;
-
-		unsigned	int	_FirstAttack( std::string const & target );
-		unsigned	int	_SecondAttack( std::string const & target );
-		unsigned	int	_ThirdAttack( std::string const & target );
-		unsigned	int	_FourthAttack( std::string const & target );
-		unsigned	int	_FifthAttack( std::string const & target );
+		unsigned	int	_FirstChallenge( void );
+		unsigned	int	_SecondChallenge( void );
+		unsigned	int	_ThirdChallenge( void );
+		unsigned	int	_FourthChallenge( void );
+		unsigned	int	_FifthChallenge( void );
 		
 };
 
-std::ostream	&	operator<<( std::ostream & o, FragTrap const & rhs );
+std::ostream	&	operator<<( std::ostream & o, ScavTrap const & rhs );
 
 #endif

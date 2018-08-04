@@ -6,7 +6,7 @@
 /*   By: clegirar <clegirar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/03 11:31:43 by clegirar          #+#    #+#             */
-/*   Updated: 2018/08/04 15:57:59 by clegirar         ###   ########.fr       */
+/*   Updated: 2018/08/04 16:00:47 by clegirar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,7 @@ class	FragTrap	{
 };
 
 std::ostream	&	operator<<( std::ostream & o, FragTrap const & rhs );
+
+size_t	genRandomNum( int a, int b );
 
 #endif

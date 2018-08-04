@@ -6,24 +6,24 @@
 /*   By: clegirar <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/03 14:33:02 by clegirar          #+#    #+#             */
-/*   Updated: 2018/08/04 16:08:09 by clegirar         ###   ########.fr       */
+/*   Updated: 2018/08/04 16:19:24 by clegirar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap( void ) : _HitPoints(100), _MaxHitPoints(100), _EnergyPoints(100), _MaxEnergyPoints(100), _Level(1), _MeleeAttackDmg(30), _RangedAttackDmg(20), _ArmorDmgReduction(5), _FirstAttackDmg(40), _SecondAttackDmg(40), _ThirdAttackDmg(40), _FourthAttackDmg(40), _FifthAttackDmg(40), _CostVaulthunter(25) {
-	std::cout << "Default Constructor called." << std::endl;
+	std::cout << "Default FragTrap Constructor called." << std::endl;
 	return ;
 }
 
 FragTrap::FragTrap( std::string name ) : _HitPoints(100), _MaxHitPoints(100), _EnergyPoints(100), _MaxEnergyPoints(100), _Level(1), _MeleeAttackDmg(30), _RangedAttackDmg(20), _ArmorDmgReduction(5), _name(name), _FirstAttackDmg(40), _SecondAttackDmg(40), _ThirdAttackDmg(40), _FourthAttackDmg(40), _FifthAttackDmg(40), _CostVaulthunter(25) {
-	std::cout << "Parameter Constructor called." << std::endl;
+	std::cout << "Parameter FragTrap Constructor called." << std::endl;
 	return ;
 }
 
 FragTrap::FragTrap( FragTrap const & src ) {
-	std::cout << "Copy Constructor called." << std::endl;
+	std::cout << "Copy FragTrap Constructor called." << std::endl;
 	*this = src;
 	return ;
 }
@@ -124,7 +124,7 @@ unsigned	int	FragTrap::vaulthunter_dot_exe( std::string const & target ) {
 }
 
 FragTrap::~FragTrap( void ) {
-	std::cout << "Destructor called." << std::endl;
+	std::cout << "FragTrap Destructor called." << std::endl;
 	return ;
 }
 

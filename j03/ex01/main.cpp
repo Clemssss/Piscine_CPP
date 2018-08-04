@@ -6,11 +6,12 @@
 /*   By: clegirar <clegirar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/03 11:31:23 by clegirar          #+#    #+#             */
-/*   Updated: 2018/08/04 11:51:31 by clegirar         ###   ########.fr       */
+/*   Updated: 2018/08/04 15:46:00 by clegirar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+#include "ScavTrap.hpp"
 #include <iostream>
 
 int		main( void ) {
@@ -25,5 +26,13 @@ int		main( void ) {
 	Player1.takeDamage(Player2.vaulthunter_dot_exe(Player1.getName()));
 	Player1.takeDamage(Player2.vaulthunter_dot_exe(Player1.getName()));
 	Player1.takeDamage(Player2.vaulthunter_dot_exe(Player1.getName()));
+
+	ScavTrap	test1("test 1");
+	ScavTrap	test2("test 2");
+
+	test2.takeDamage(test1.rangedAttack(test2.getName()));
+	test1.takeDamage(test2.meleeAttack(test1.getName()));
+	test1.challengeNewcomer();
+	test2.challengeNewcomer();
 	return 0;
 }
